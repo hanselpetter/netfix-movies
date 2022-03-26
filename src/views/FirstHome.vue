@@ -6,15 +6,16 @@
     </div>
     <div class="section-two">
       <h1 class="title-two">Now playing on NetFix.</h1>
-      <p class="text-two">Our huge library of ad-supported movies and shows is available on demand, 24/7. 
-         Start watching now, no payment or subscription required.
+      <p class="text-two">
+        Our huge library of ad-supported movies and shows is available on demand, 24/7. 
+        Start watching now, no payment or subscription required.
       </p>
       <div class="features">
-        <img src="https://m.media-amazon.com/images/M/MV5BMTk0Mzg1MTU1MF5BMl5BanBnXkFtZTgwMjU3ODI2MzE@._V1_SX300.jpg" alt="Naruto Poster" class="featured marg" />
-        <img src="https://m.media-amazon.com/images/M/MV5BMTY4NjQ5NDc0Nl5BMl5BanBnXkFtZTYwNjk5NDM3._V1_SX300.jpg" alt="Naruto Poster" class="featured marg" />
-        <img src="https://m.media-amazon.com/images/M/MV5BMTU4MjI5NTEyNV5BMl5BanBnXkFtZTcwNjQ1NTMzMg@@._V1_SX300.jpg" alt="Naruto Poster" class="featured marg" />
-        <img src="https://m.media-amazon.com/images/M/MV5BYjZjODRlMjQtMjJlYy00ZDBjLTkyYTQtZGQxZTk5NzJhYmNmXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" alt="Naruto Poster" class="featured marg" />
-        <img src="https://m.media-amazon.com/images/M/MV5BMTg2MjkwMTM0NF5BMl5BanBnXkFtZTcwMzc4NDg2NQ@@._V1_SX300.jpg" alt="Naruto Poster" class="featured" />
+        <img src="https://m.media-amazon.com/images/M/MV5BMTk0Mzg1MTU1MF5BMl5BanBnXkFtZTgwMjU3ODI2MzE@._V1_SX300.jpg" alt="Love, Rosie poster" class="featured marg" />
+        <img src="https://m.media-amazon.com/images/M/MV5BMTY4NjQ5NDc0Nl5BMl5BanBnXkFtZTYwNjk5NDM3._V1_SX300.jpg" alt="love actually Poster" class="featured marg" />
+        <img src="https://m.media-amazon.com/images/M/MV5BMTU4MjI5NTEyNV5BMl5BanBnXkFtZTcwNjQ1NTMzMg@@._V1_SX300.jpg" alt="I love you man Poster" class="featured marg" />
+        <img src="https://m.media-amazon.com/images/M/MV5BYjZjODRlMjQtMjJlYy00ZDBjLTkyYTQtZGQxZTk5NzJhYmNmXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" alt="In the mood for love Poster" class="featured marg" />
+        <img src="https://m.media-amazon.com/images/M/MV5BMTg2MjkwMTM0NF5BMl5BanBnXkFtZTcwMzc4NDg2NQ@@._V1_SX300.jpg" alt="Crazy stupid love Poster" class="featured" />
       </div>
     </div>
     <div class="section-two sec">
@@ -103,7 +104,7 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 2%;
+  padding: 2% 3% 2% 5%;
   @media only screen and (min-width:500px) {
     background: url('../assets/phon.png');
     background-size: cover;
@@ -116,7 +117,7 @@ export default {
   }
   .title-one {
     max-width: 100%;
-    margin-top: 17rem;
+    margin-top: 13rem;
     color: #fff;
     @media only screen and (min-width:992px) {
       max-width: 40%;
@@ -130,10 +131,12 @@ export default {
     max-width: 100%;
     color: #fff;
     font-size: 1.08em;
+    margin-top: 2%;
     @media only screen and (min-width:992px) {
       font-size: 1.3em;
       color: #000;
       max-width: 35%;
+      margin-top: 1.5%;
     }
   }
 }

@@ -1,28 +1,19 @@
 <template>
 	<main class="sign">
 		<section class="forms">
-
 			<form class="register" @submit.prevent="register">
 				<h2>Register</h2>
-				<input 
-					type="email" 
-					placeholder="Email address"
-					v-model="register_form.email" />
-				<input 
-					type="password" 
-					placeholder="Password" 
-					v-model="register_form.password" />
-				<input 
-					type="submit" 
-					value="Register" />
+				<input type="email" placeholder="Email address" v-model="register_form.email" />
+				<input type="password" placeholder="Password" v-model="register_form.password" />
+				<input type="submit" value="Register" />
 			</form>
 		</section>
 	</main>
 </template>
 
 <script>
-import { ref } from 'vue'
-import { useStore } from 'vuex'
+import { ref } from 'vue';
+import { useStore } from 'vuex';
 export default {
 	setup () {
 		const register_form = ref({});
@@ -63,7 +54,7 @@ input {
 	appearance: none;
 	border: none;
 	outline: none;
-	background: none;
+	background: #fff;
 	display: block;
 	width: 100%;
 	max-width: 400px;

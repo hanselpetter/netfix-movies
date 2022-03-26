@@ -2,10 +2,13 @@
   <div class="home">
     <div class="feature-card">
       <router-link to="/movie/tt1638002">
-        <img src="https://m.media-amazon.com/images/M/MV5BMTk0Mzg1MTU1MF5BMl5BanBnXkFtZTgwMjU3ODI2MzE@._V1_SX300.jpg" alt="Naruto Poster" class="featured-img" />
+        <img src="https://m.media-amazon.com/images/M/MV5BMTk0Mzg1MTU1MF5BMl5BanBnXkFtZTgwMjU3ODI2MzE@._V1_SX300.jpg" alt="Love, Rosie Poster" class="featured-img" />
         <div class="detail">
           <h3>Love, Rosie</h3>
-          <p>From the age of 5 Rosie Dunne and Alex Stewart have been best friends, as they take on life they just end up getting separated time and time again. When it comes to love it's just everyone else but each other.... But when will they realise they are meant to be together?</p>
+          <p>
+            From the age of 5 Rosie Dunne and Alex Stewart have been best friends, as they take on life they just end up getting separated time and time again. 
+            When it comes to love it's just everyone else but each other.... But when will they realise they are meant to be together?
+          </p>
         </div>
       </router-link>
     </div>

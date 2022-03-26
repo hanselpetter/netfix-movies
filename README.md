@@ -3,38 +3,33 @@
 In this project, I will build a movie application where users can sign up, login, and search for movies.
 
 
-## Project setup
-```
-npm install
-```
+### Project setup
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+`npm install`
 
-### Compiles and minifies for production
-```
-npm run build
-```
+#### Compiles and hot-reloads for development
 
-### Run your unit tests
-```
-npm run test:unit
-```
+`npm run serve`
 
-### Lints and fixes files
-```
-npm run lint
-```
+
+#### Compiles and minifies for production
+
+`npm run build`
+
+#### Lints and fixes files
+
+`npm run lint`
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
 
 ## 🖥️ live Demo
 Here is the [live demo](https://rainbow-liger-5f922b.netlify.app/home)
 
-
-![image]()
+> Screenshoots
+![image](https://www.linkpicture.com/q/netphon.png)
+![image](https://www.linkpicture.com/q/netfi.png)
 
 ### Built With
 

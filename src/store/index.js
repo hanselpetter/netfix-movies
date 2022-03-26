@@ -1,11 +1,11 @@
-import { createStore } from 'vuex'
-import router from '../router'
-import { auth } from '../firebase'
+import { createStore } from 'vuex';
+import router from '../router';
+import { auth } from '../firebase';
 import { 
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut 
-} from 'firebase/auth'
+} from 'firebase/auth';
 
 export default createStore({
   state: {
@@ -45,7 +45,7 @@ export default createStore({
 
       commit('SET_USER', auth.currentUser)
 
-      router.push('/')
+      router.push('/home')
     },
 
     async register ({ commit}, details) {
@@ -76,7 +76,7 @@ export default createStore({
 
       commit('SET_USER', auth.currentUser)
 
-      router.push('/')
+      router.push('/home')
     },
 
     async logout ({ commit }) {
@@ -84,7 +84,7 @@ export default createStore({
 
       commit('CLEAR_USER')
 
-      router.push('/home')
+      router.push('/')
     },
 
     fetchUser ({ commit }) {
