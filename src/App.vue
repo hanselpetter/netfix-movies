@@ -1,18 +1,18 @@
 <template>
-  <header id="nav" v-if="$store.state.user">
-    <router-link to="/">
+  <header id="nav" v-if="$store.state.user" class="header">
+    <router-link to="/home">
       <h1>
         <span>NetFix</span>
         Movies
       </h1>
     </router-link>
     <div class="log-div">
-      <router-link to="/" class="log">Home</router-link>
-      <button @click="$store.dispatch('logout')" class="log sign logout">Logout</button>
+      <router-link to="/home" class="log">Home</router-link>
+      <button class="log sign logout" @click="$store.dispatch('logout')">Logout</button>
     </div>
   </header>
-  <header id="nav" v-else>
-    <router-link to="/home">
+  <nav id="navi" class="header" v-else>
+    <router-link to="/">
       <h1>
         <span>NetFix</span>
         Movies
@@ -22,7 +22,7 @@
       <router-link to="/login" class="log">Log in</router-link>
       <router-link to="/signup" class="log sign">Sign up</router-link>
     </div>
-  </header>
+  </nav>
   <main>
     <router-view/>
   </main>
@@ -60,7 +60,7 @@ body {
 a {
   text-decoration: none;
 }
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -96,7 +96,7 @@ header {
 }
 
 .sign {
-  margin-left: 5%;
+  margin-left: 10%;
   @media only screen and (min-width:992px) {
     margin-left: 3%
   }

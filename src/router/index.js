@@ -1,14 +1,14 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
 import MovieDetail from '../views/MovieDetail.vue';
-import FirstHome from '../views/FirstHome.vue'
-import LogIn from '../views/LogIn.vue'
-import SignUp from '../views/SignUp.vue'
-import { auth } from '../firebase'
+import FirstHome from '../views/FirstHome.vue';
+import LogIn from '../views/LogIn.vue';
+import SignUp from '../views/SignUp.vue';
+import { auth } from '../firebase';
 
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: HomeView,
     meta: {
@@ -31,7 +31,7 @@ const routes = [
     component: SignUp
   },
   {
-    path: '/home',
+    path: '/',
     name: 'FirstHome',
     component: FirstHome,
     meta: {
