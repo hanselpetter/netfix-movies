@@ -31,7 +31,7 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## 🖥️ live Demo
-Here is the [live demo]()
+Here is the [live demo](https://rainbow-liger-5f922b.netlify.app/home)
 
 
 ![image]()
