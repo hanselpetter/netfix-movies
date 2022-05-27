@@ -414,6 +414,10 @@ export default {
   .bloc {
     margin: 0 0 3% 0;
   }
+  
+  .text {
+    margin: 2% 0 0 0;
+  }
 
   .tex {
     margin: 1.9% 0 1.9% 0;
