@@ -416,7 +416,7 @@ export default {
   }
   
   .text {
-    margin: 2% 0 0 0;
+    margin: 1% 0 0 0;
   }
 
   .tex {
