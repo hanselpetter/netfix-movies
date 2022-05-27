@@ -1,93 +1,116 @@
 <template>
-	<main class="login">
-		<section class="forms">
-			<form class="login" @submit.prevent="login">
-				<h2>Login</h2>
-				<input type="email" placeholder="Email address" v-model="login_form.email" />
-				<input type="password" placeholder="Password" v-model="login_form.password" />
-				<input type="submit" value="Login" />
-			</form>
-		</section>
-	</main>
+  <main class="signx">
+    <section class="forms">
+      <form class="login" @submit.prevent="login">
+        <h2>Login</h2>
+        <input
+          type="email"
+          placeholder="Email address"
+          class="inp"
+          v-model="login_form.email"
+          onfocus="this.placeholder=''"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          class="inp"
+          v-model="login_form.password"
+          onfocus="this.placeholder=''"
+        />
+        <input type="submit" class="sub" value="Login" />
+      </form>
+    </section>
+  </main>
 </template>
 
 <script>
-import { ref } from 'vue';
-import { useStore } from 'vuex';
+import { ref } from "vue";
+import { useStore } from "vuex";
 export default {
-	setup () {
-		const login_form = ref({});
-		const store = useStore();
-		const login = () => {
-			store.dispatch('login', login_form.value);
-		}
-		return {
-			login_form,
-			login,
-		}
-	}
-}
+  setup() {
+    const login_form = ref({});
+    const store = useStore();
+    const login = () => {
+      store.dispatch("login", login_form.value);
+    };
+    return {
+      login_form,
+      login,
+    };
+  },
+};
 </script>
 
 <style>
-.forms {
-	display: flex;
-	min-height: 100vh;
+.inp {
+  padding: 2% 2% 2% 3%;
+  font-size: 1.3em;
 }
-form {
-	flex: 1 1 0%;
-	padding: 8rem 1rem 1rem;
+
+.inp:focus {
+  border: 2px solid #000;
+  border-radius: 5px;
 }
-form.register {
-	color: #FFF;
-}
+
 h2 {
   width: 100%;
-	text-align: center;
-	font-size: 2rem;
+  text-align: center;
+  font-size: 2rem;
   color: #fff;
-	text-transform: uppercase;
-	margin-bottom: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
 }
-input {
-	appearance: none;
-	border: none;
-	outline: none;
-	background: #fff;
-	display: block;
-	width: 100%;
-	max-width: 400px;
-	margin: 0 auto;
-	font-size: 1.5rem;
-	margin-bottom: 2rem;
-	padding: 0.5rem 0rem;
+
+.inp {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: #fff;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0rem;
 }
 
 input:focus {
-	border: 1.5px solid #42B883;
+  border: 1.5px solid #42b883;
 }
+
 input:not([type="submit"]) {
-	opacity: 0.8;
-	transition: 0.4s;
+  opacity: 0.8;
+  transition: 0.4s;
 }
+
 input:focus:not([type="submit"]) {
-	opacity: 1;
+  opacity: 1;
 }
+
 input::placeholder {
-	color: inherit;
+  color: inherit;
 }
 
 form.login input:not([type="submit"]) {
-	color: #2c3e50;
-	border-bottom: 2px solid #2c3e50;
+  color: #2c3e50;
+  border-bottom: 2px solid #2c3e50;
 }
-form.login input[type="submit"] {
-	background-color: rgb(245, 66, 101);
-	color: #FFF;
-	font-weight: 700;
-	padding: 1rem 2rem;
-	border-radius: 0.5rem;
-	cursor: pointer;
-	text-transform: uppercase;
+
+.sub {
+  display: flex;
+  color: #fff;
+  border-radius: 50px;
+  background-color: #42b883;
+  width: 40%;
+  padding: 2%;
+  border: transparent;
+  justify-content: center;
+  margin: 1% auto 0 auto;
+  font-size: 1.2em;
+}
+
+.sub:focus {
+  cursor: pointer;
 }
 </style>
