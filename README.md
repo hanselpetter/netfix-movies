@@ -29,8 +29,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 Here is the [live demo](https://rainbow-liger-5f922b.netlify.app/)
 
 >
-![image](https://www.linkpicture.com/q/netphon.png)
-![image](https://www.linkpicture.com/q/netfi.png)
+![image](https://www.linkpicture.com/q/netfi_1.png)
+![image](https://www.linkpicture.com/q/yes-netfix.png)
 
 ### Built With
 
