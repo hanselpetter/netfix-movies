@@ -15,7 +15,7 @@
         />
       </div>
       <div class="movi-div">
-        <MoviesViewVue
+        <ShowViewVue
           v-for="(mox, index) in MovieSearch"
           :key="mox.id"
           class="movitb"
@@ -33,12 +33,12 @@ import { ref, onBeforeMount } from "vue";
 import { useRoute } from "vue-router";
 import env from "@/env.js";
 import FooterBloackVue from "../components/FooterBloack.vue";
-import MoviesViewVue from "../components/MoviesView.vue";
+import ShowViewVue from "../components/ShowView.vue";
 
 export default {
   components: {
     FooterBloackVue,
-    MoviesViewVue,
+    ShowViewVue,
   },
   setup() {
     const movies = ref([]);
@@ -46,7 +46,7 @@ export default {
     const search = ref("");
     onBeforeMount(() => {
       fetch(
-        `https://api.themoviedb.org/3/movie/${route.params.id}/similar?api_key=${env.apikeys}&language=en-US`
+        `https://api.themoviedb.org/3/tv/${route.params.id}/similar?api_key=${env.apikeys}&language=en-US`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -64,7 +64,7 @@ export default {
       let moviesArr = [];
       if (this.search !== "") {
         moviesArr = this.movies.filter((p) =>
-          p.title.toLowerCase().includes(this.search.toLowerCase())
+          p.name.toLowerCase().includes(this.search.toLowerCase())
         );
       } else {
         moviesArr = this.movies;

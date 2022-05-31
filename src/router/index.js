@@ -18,6 +18,8 @@ import MusicMovies from "../views/MusicMovies.vue";
 import RomanceMovies from "../views/RomanceMovies.vue";
 import { auth } from "../firebase";
 import SimilarMovies from "../views/SimilarMovies.vue";
+import TvShowDetail from "../views/TvShowDetail.vue";
+import SimilarTvShows from "../views/SimilarTvShows.vue";
 
 const routes = [
   {
@@ -47,6 +49,11 @@ const routes = [
     path: "/animation",
     name: "Animation-Movies",
     component: AnimationMovies,
+  },
+  {
+    path: "/tv_show/:id",
+    name: "Detail-show",
+    component: TvShowDetail,
   },
   {
     path: "/comedy",
@@ -97,6 +104,11 @@ const routes = [
     path: "/movie/similar_movies/:id",
     name: "Similar",
     component: SimilarMovies,
+  },
+  {
+    path: "/tv_show/similar_tv_show/:id",
+    name: "Similar-show",
+    component: SimilarTvShows,
   },
   {
     path: "/login",
