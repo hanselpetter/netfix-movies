@@ -16,37 +16,30 @@
       </div>
       <h1 class="h-one">Family Movies</h1>
       <div class="movi-div">
-        <div class="movitb" v-for="mox in sum" :key="mox.id">
-          <router-link :to="'/movie/' + mox.id" class="movie-link">
-            <div class="imag">
-              <img
-                :src="'https://image.tmdb.org/t/p/w500' + mox.poster_path"
-                alt="Movie Poster"
-                class="img"
-              />
-              <h3 class="type">{{ mox.title }}</h3>
-            </div>
-          </router-link>
-        </div>
+        <MoviesViewVue
+          v-for="(mox, index) in sum"
+          :key="mox.id"
+          class="movitb"
+          :index="index"
+          :movie="mox"
+        />
       </div>
     </div>
   </div>
-  <div class="footers">
-    <hr />
-    <div class="footers-foot">
-      <small class="footers-foo"
-        >Copyright © 2022 NetFlix Privacy & Legal AdChoices
-      </small>
-      <small class="footers-foo"> Accessibility Language: English (US)</small>
-    </div>
-  </div>
+  <FooterBloackVue />
 </template>
 
 <script>
 import { ref } from "vue";
 import env from "@/env.js";
+import FooterBloackVue from "../components/FooterBloack.vue";
+import MoviesViewVue from "../components/MoviesView.vue";
 
 export default {
+  components: {
+    FooterBloackVue,
+    MoviesViewVue,
+  },
   created() {
     this.Movix1();
     this.Movix2();

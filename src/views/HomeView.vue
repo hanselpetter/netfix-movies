@@ -23,18 +23,13 @@
             Most Popular Movies
           </h3>
           <div class="movi-div">
-            <div class="movitb" v-for="movie in searchMovie" :key="movie.id">
-              <router-link :to="'/movie/' + movie.id" class="movie-link">
-                <div class="imag">
-                  <img
-                    :src="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
-                    alt="Movie Poster"
-                    class="img"
-                  />
-                  <h3 class="type">{{ movie.title }}</h3>
-                </div>
-              </router-link>
-            </div>
+            <MoviesViewVue
+              v-for="(mox, index) in searchMovie"
+              :key="mox.id"
+              class="movitb"
+              :index="index"
+              :movie="mox"
+            />
           </div>
         </div>
         <button
@@ -48,18 +43,13 @@
         </button>
         <div class="homex">
           <div class="movi-div" v-if="more">
-            <div class="movitb" v-for="movx in searchFromSecArr" :key="movx.id">
-              <router-link :to="'/movie/' + movx.id" class="movie-link">
-                <div class="imag">
-                  <img
-                    :src="'https://image.tmdb.org/t/p/w500' + movx.poster_path"
-                    alt="Movie Poster"
-                    class="img"
-                  />
-                  <h3 class="type">{{ movx.title }}</h3>
-                </div>
-              </router-link>
-            </div>
+            <MoviesViewVue
+              v-for="(mox, index) in searchFromSecArr"
+              :key="mox.id"
+              class="movitb"
+              :index="index"
+              :movie="mox"
+            />
           </div>
         </div>
         <button
@@ -81,18 +71,13 @@
             Top Rated Movies
           </h3>
           <div class="movi-div">
-            <div class="movitb" v-for="rate in searchRated" :key="rate.id">
-              <router-link :to="'/movie/' + rate.id" class="movie-link">
-                <div class="imag">
-                  <img
-                    :src="'https://image.tmdb.org/t/p/w500' + rate.poster_path"
-                    alt="Movie Poster"
-                    class="img"
-                  />
-                  <h3 class="type">{{ rate.title }}</h3>
-                </div>
-              </router-link>
-            </div>
+            <MoviesViewVue
+              v-for="(mox, index) in searchRated"
+              :key="mox.id"
+              class="movitb"
+              :index="index"
+              :movie="mox"
+            />
           </div>
         </div>
         <button
@@ -106,22 +91,13 @@
         </button>
         <div class="homex">
           <div class="movi-div" v-if="moreRate">
-            <div
+            <MoviesViewVue
+              v-for="(mox, index) in searchFromSecRate"
+              :key="mox.id"
               class="movitb"
-              v-for="rats in searchFromSecRate"
-              :key="rats.id"
-            >
-              <router-link :to="'/movie/' + rats.id" class="movie-link">
-                <div class="imag">
-                  <img
-                    :src="'https://image.tmdb.org/t/p/w500' + rats.poster_path"
-                    alt="Movie Poster"
-                    class="img"
-                  />
-                  <h3 class="type">{{ rats.title }}</h3>
-                </div>
-              </router-link>
-            </div>
+              :index="index"
+              :movie="mox"
+            />
           </div>
         </div>
         <button
@@ -145,18 +121,13 @@
             Most Popular TV Shows
           </h3>
           <div class="movi-div">
-            <div class="movitb" v-for="show in searchFromtvShow" :key="show.id">
-              <router-link :to="'/movie/' + show.id" class="movie-link">
-                <div class="imag">
-                  <img
-                    :src="'https://image.tmdb.org/t/p/w500' + show.poster_path"
-                    alt="Movie Poster"
-                    class="img"
-                  />
-                  <h3 class="type">{{ show.name }}</h3>
-                </div>
-              </router-link>
-            </div>
+            <ShowViewVue
+              v-for="(mox, index) in searchFromtvShow"
+              :key="mox.id"
+              class="movitb"
+              :index="index"
+              :movie="mox"
+            />
           </div>
         </div>
         <button
@@ -170,22 +141,13 @@
         </button>
         <div class="homex">
           <div class="movi-div" v-if="moreShow">
-            <div
+            <ShowViewVue
+              v-for="(mox, index) in searchFromtArrShow"
+              :key="mox.id"
               class="movitb"
-              v-for="sect in searchFromtArrShow"
-              :key="sect.id"
-            >
-              <router-link :to="'/movie/' + sect.id" class="movie-link">
-                <div class="imag">
-                  <img
-                    :src="'https://image.tmdb.org/t/p/w500' + sect.poster_path"
-                    alt="Movie Poster"
-                    class="img"
-                  />
-                  <h3 class="type">{{ sect.name }}</h3>
-                </div>
-              </router-link>
-            </div>
+              :index="index"
+              :movie="mox"
+            />
           </div>
         </div>
         <button
@@ -209,77 +171,63 @@
             TV Shows Airing today
           </h3>
           <div class="movi-div">
-            <div class="movitb" v-for="show in searchFromtAir" :key="show.id">
-              <router-link :to="'/movie/' + show.id" class="movie-link">
-                <div class="imag">
-                  <img
-                    :src="'https://image.tmdb.org/t/p/w500' + show.poster_path"
-                    alt="Movie Poster"
-                    class="img"
-                  />
-                  <h3 class="type">{{ show.name }}</h3>
-                </div>
-              </router-link>
+              <ShowViewVue
+                v-for="(mox, index) in searchFromtAir"
+                :key="mox.id"
+                class="movitb"
+                :index="index"
+                :movie="mox"
+              />
             </div>
           </div>
-        </div>
-        <button
-          type="button"
-          v-if="!topMor && searchFromtMoreAir.length !== 0"
-          class="click"
-          @click="moreTop()"
-        >
-          <p class="pt">Show more</p>
-          <i class="fa fa-arrow-right"></i>
-        </button>
-        <div class="homex">
-          <div class="movi-div" v-if="topMor">
-            <div
-              class="movitb"
-              v-for="sect in searchFromtMoreAir"
-              :key="sect.id"
-            >
-              <router-link :to="'/movie/' + sect.id" class="movie-link">
-                <div class="imag">
-                  <img
-                    :src="'https://image.tmdb.org/t/p/w500' + sect.poster_path"
-                    alt="Movie Poster"
-                    class="img"
-                  />
-                  <h3 class="type">{{ sect.name }}</h3>
-                </div>
-              </router-link>
+          <button
+            type="button"
+            v-if="!topMor && searchFromtMoreAir.length !== 0"
+            class="click"
+            @click="moreTop()"
+          >
+            <p class="pt">Show more</p>
+            <i class="fa fa-arrow-right"></i>
+          </button>
+          <div class="homex">
+            <div class="movi-div" v-if="topMor">
+              <ShowViewVue
+                v-for="(mox, index) in searchFromtMoreAir"
+                :key="mox.id"
+                class="movitb"
+                :index="index"
+                :movie="mox"
+              />
             </div>
           </div>
+          <button
+            type="button"
+            v-if="topMor && searchFromtMoreAir.length !== 0"
+            class="click"
+            @click="moreTop()"
+          >
+            <p class="pt">Show less</p>
+            <i class="fa fa-arrow-right"></i>
+          </button>
         </div>
-        <button
-          type="button"
-          v-if="topMor && searchFromtMoreAir.length !== 0"
-          class="click"
-          @click="moreTop()"
-        >
-          <p class="pt">Show less</p>
-          <i class="fa fa-arrow-right"></i>
-        </button>
       </div>
     </div>
-  </div>
-  <div class="footers">
-    <hr />
-    <div class="footers-foot">
-      <small class="footers-foo"
-        >Copyright © 2022 NetFlix Privacy & Legal AdChoices
-      </small>
-      <small class="footers-foo"> Accessibility Language: English (US)</small>
-    </div>
-  </div>
+  <FooterBloackVue />
 </template>
 
 <script>
 import { ref } from "vue";
 import env from "@/env.js";
+import FooterBloackVue from "../components/FooterBloack.vue";
+import MoviesViewVue from "../components/MoviesView.vue";
+import ShowViewVue from "../components/ShowView.vue";
 
 export default {
+  components: {
+    FooterBloackVue,
+    MoviesViewVue,
+    ShowViewVue,
+  },
   created() {
     this.Movix();
     this.MostRated();
@@ -530,11 +478,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.img {
-  width: 100%;
-  height: 23rem;
 }
 
 .footers {
