@@ -65,22 +65,19 @@
       <h3 class="no">No information available for this movie/show</h3>
     </div>
   </div>
-  <div class="footers">
-    <hr />
-    <div class="footers-foot">
-      <small class="footers-foo"
-        >Copyright © 2022 NetFlix Privacy & Legal AdChoices
-      </small>
-      <small class="footers-foo"> Accessibility Language: English (US)</small>
-    </div>
-  </div>
+  <FooterBloackVue />
 </template>
 
 <script>
 import { ref, onBeforeMount } from "vue";
 import { useRoute } from "vue-router";
 import env from "@/env.js";
+import FooterBloackVue from "../components/FooterBloack.vue";
+
 export default {
+  components: {
+    FooterBloackVue,
+  },
   setup() {
     const movie = ref({});
     const route = useRoute();

@@ -76,23 +76,19 @@
         </div>
       </div>
     </div>
-    <div class="footers">
-      <hr />
-      <div class="footers-foot">
-        <small class="footers-foo"
-          >Copyright © 2022 NetFlix Privacy & Legal AdChoices
-        </small>
-        <small class="footers-foo"> Accessibility Language: English (US)</small>
-      </div>
-    </div>
   </div>
+  <FooterBloackVue />
 </template>
 
 <script>
 import { ref } from "vue";
 import env from "@/env.js";
+import FooterBloackVue from "../components/FooterBloack.vue";
 
 export default {
+  components: {
+    FooterBloackVue,
+  },
   created() {
     this.Movix();
   },
@@ -181,7 +177,7 @@ export default {
 
 .spn {
   color: #000;
-   font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 .movx,
@@ -229,7 +225,7 @@ export default {
   text-align: center;
   margin: 28% 0 0 0;
   color: #fff;
-   font-size: 2.2em;
+  font-size: 2.2em;
 }
 
 .font {
@@ -287,20 +283,6 @@ export default {
   text-align: center;
   margin: 5% 0 3% 0;
   font-size: 1.1em;
-}
-
-.footers {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.19em;
-}
-
-.footers-foo {
-  list-style: 26px;
-}
-
-.footers-foot {
-  padding: 2% 0 4% 4%;
 }
 
 @media only screen and (min-width: 992px) {
@@ -394,21 +376,6 @@ export default {
     width: 42%;
     align-items: center;
     margin: 0;
-  }
-
-  .footers {
-    flex-direction: column;
-    padding: 0;
-  }
-
-  .footers-foot {
-    padding: 0;
-  }
-
-  .footers-foo {
-    margin: 0 2% 0 1%;
-    font-size: 15px;
-    letter-spacing: 0.7px;
   }
 
   .bloc {
