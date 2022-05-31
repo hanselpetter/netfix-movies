@@ -301,6 +301,7 @@ export default {
     color: #fff;
     font-weight: 600;
     letter-spacing: 0.6px;
+    margin-top: 1% ;
   }
 
   .sec-two {
