@@ -48,8 +48,7 @@ Here is the [live demo](https://rainbow-liger-5f922b.netlify.app/)
 
 ## 👩 Author
 
-- Github: [Azonkeu](https://github.com/Azonkeu)
-- LinkedIn: [Azonkeu Ornela](https://www.linkedin.com/in/azonkeu-ornela-88a14b172/)
+- Github: [Hansel](https://github.com/hanselpetter)
 
 
 ### Show your support
@@ -58,5 +57,5 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://github.com/Azonkeu/netflix-movies/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/hanselpetter/netfix-movies/blob/main/LICENSE) licensed.
 
